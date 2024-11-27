@@ -7,7 +7,7 @@ source do4.env
 #
 #
 #
-log() { local now=$(date +'%Y-%m-%d %H:%M:%S') && echo "[$now] $1" ; }
+log() { local now=$(date +'%y-%m-%d %H:%M:%S') && echo "[$now] $1" ; }
 do_env(){
     log "do_user     ${do_user}"
     log "do_pass     ${do_pass}"
@@ -19,10 +19,13 @@ do_env(){
 # [] ssh-keygen
 # cd ~/.ssh
 # ssh-keygen -f id_rsa_do24.pub -C xxx@yyy.zzz
+# chmod 600 ~/.ssh/xx_xxx
 #
 HOME_SSH=${HOME}/.ssh
 do4_ssh_cfg=$HOME_SSH/config
-do4_ssh_pub=$HOME_SSH/id_rsa_do24.pub
+do4_ssh_key=$HOME_SSH/id_rsa_do24
+do4_ssh_key_pub=$HOME_SSH/id_rsa_do24.pub
+
 
 #
 # https://docs.digitalocean.com/products/droplets/how-to/add-ssh-keys/
