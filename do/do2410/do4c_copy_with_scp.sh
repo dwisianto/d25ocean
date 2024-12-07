@@ -5,15 +5,7 @@
 source do24.env
 source ${DO24_HOME}/do2410/do4a_access_key.sh
 
-#
-# []do4q4
-#
 
-do4_ssh_x="ssh -i ${do4_ssh_key} ${do4_connection}"
-
-do4_ssh(){ fname=${FUNCNAME[0]} && log "${fname} : ${fname}_, ${fname}__ " ; } 
-do4_ssh_(){ echo ${do4_ssh_x} ; } 
-do4_ssh__(){ $(do4_ssh_) ; }
 
 #
 #
@@ -55,6 +47,7 @@ do4_scp_out_zip_file=''
 do4_scp_out_src=${DO24_SERVER}/${do4_scp_out_zip_file}
 do4_scp_out_tgt=${DO24_HOME}
 do4_scp_out_cmd="scp -i ${do4_ssh_key} ${do4_connection}:${do4_scp_out_src} ${do4_scp_out_tgt}"
+
 do4_scp_out(){ 
     echo """
     Secure Copy using Key:${do4_ssh_key} 
@@ -62,5 +55,5 @@ do4_scp_out(){
         To         : ${do4_scp_out_tgt}
     """
 }
-do4_scp_out_(){ echo ${do4_scp_out_cmd} }
-do4_scp_out__(){ $(do4_scp_out_) }
+do4_scp_out_(){ echo ${do4_scp_out_cmd} ; }
+do4_scp_out__(){ $(do4_scp_out_) ; }

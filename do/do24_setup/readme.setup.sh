@@ -1,5 +1,7 @@
 
 """
+- Install packages
+    - apt install unzip
 - bash_profile & bash_aliases
     - cp docean_bash_profile.sh ~/.bash_aliases
     - cp docean_bash_profile.sh ~/.bash_profile
@@ -13,6 +15,11 @@
     - $HOME/.condarc
 - Open Port using the User Interface
     - https://www.digitalocean.com/community/tutorials/opening-a-port-on-linux
+- Git Clone
+    - git clone https://github.com/dwisianto/d25ocean.git
+    - git checkout <branch-name>
+- VSCode
+    - 
 - SystemD
     - https://www.digitalocean.com/community/tutorials/understanding-systemd-units-and-unit-files
     - 

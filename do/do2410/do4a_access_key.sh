@@ -35,3 +35,9 @@ do4_connection="${do_user}@${do_address}"
 do4_ssh_copy_id="ssh-copy-id ${do4_connection}"
 do4_ssh_copy_(){ echo ${do4_ssh_copy_id} ; } 
 do4_ssh_copy__(){ $(do4_ssh_copy_) ; } 
+
+
+d4__connection="${do_usr}@${do_address}"  
+d4__ssh_copy_id="ssh-copy-id ${d4__connection}"
+d4___ssh_copy_(){ echo ${d4__ssh_copy_id} ; } 
+d4___ssh_copy__(){ $(d4___ssh_copy_) ; } 
